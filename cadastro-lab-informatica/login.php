@@ -1,10 +1,10 @@
 <?php
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     session_start();
-    if($_POST['usuario'] == 'fatec' and $_POST['senha'] == 'araras'){
+    if($_POST['usuario'] == 'fatec' and $_POST['senha'] == 'araras'){ //login vai veirifcar se eh coordenção ou tecnico - trabalhar com IFs
         $_SESSION['logado'] = TRUE;
         $_SESSION["usuario"] = 'Orlando';
-         header("location: welcome.php");
+         header("location: inicio.php");
     } else {
         $_SESSION['logado'] = FALSE;
     }
