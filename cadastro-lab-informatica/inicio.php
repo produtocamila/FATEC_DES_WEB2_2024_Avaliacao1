@@ -19,7 +19,7 @@ if (isset($_GET['laboratorio'])
    } else {
        $handle = fopen("cadastro-chamados.txt", "a");
    }
-   fwrite($handle, $_GET['laboratorio']."|".$_GET['data']."|".$_GET['tarefa']."\n");
+   fwrite($handle, $_GET['laboratorio']."|".$_GET['data']."|".$_GET['tarefa']."|".$_GET['curso']."\n");
    fflush($handle);
    fclose($handle);
 }
@@ -53,6 +53,10 @@ if (isset($_GET['laboratorio'])
         <div>
             <label class="campo">Tarefa:</label><br>
             <input class="resposta" type="text" name="tarefa" value="">
+        </div><br>
+        <div>
+            <label class="campo">Curso:</label><br>
+            <input class="resposta" type="text" name="curso" value="">
         </div><br>
         <div class="cta">
                 <input type="submit" value="Abrir chamado">
